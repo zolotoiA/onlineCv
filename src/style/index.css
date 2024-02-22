@@ -1,0 +1,158 @@
+body {
+    background-color: black;
+    color: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img-top {
+    width: 50px;
+    border-radius: 50%;
+    margin: 8px 8px;
+    display: inline-block;
+}
+
+.text-description {
+    vertical-align: top;
+    width: 200px;
+    display: inline-block;
+}
+
+.short-description {
+    padding-top: -2px;
+}
+
+.card {
+    border: 1px solid #8a72a2;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(235, 0, 0);
+    padding: 50px;
+    margin: 30px 30px 30px;
+    text-align: center;
+    max-width: 250px;
+    display: grid;
+    flex-direction: row;
+    align-items: start;
+}
+
+.grid-container{
+    display: flex;
+    align-content: start;
+    justify-content: center;
+}
+
+.card-color-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .card-image {
+    height: auto;
+    max-width: 80%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: #333;*/
+    background: transparent;
+    color: white;
+    padding: 10px;
+}
+
+.header-container{
+    margin-right: -20px;
+}
+
+.header-container{
+    grid-area: header-container;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    margin: 0 10px;
+    /*background-color: #007bff;*/
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    /*background-color: #0056b3;*/
+}
+
+/* Div styles */
+.header-bar{
+    color: white;
+    padding: 3px;
+}
+
+.middle {
+
+    color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+.right-section-top {
+    color: white;
+    padding: 20px;
+}
+
+.main-container{
+    flex-direction: row;
+    height: 200%;
+    width: 20%;
+}
+
+button{
+    position: relative;
+    height: 40px;
+    width: 150px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #111;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+
+button:before{
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    filter: blur(5px);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    transition: opacity .3s ease-in-out;
+    animation: animate 20s linear infinite;
+}
+button:hover:before{
+    opacity: 1;
+}
+button:hover:active{
+    background: none;
+}
+button:hover:active:before{
+    filter: blur(2px);
+}
+@keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
